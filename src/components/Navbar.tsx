@@ -18,7 +18,7 @@ const Navbar = () => {
             Store
           </Nav.Link>
         </Nav>
-        <Button style={{width: "3rem", height: "3rem", position: "relative"}} variant="outline-primary" className="rounded-circle"><BsCart2 /> <div className="rounded-circle d-flex justify-content-center align-items-center" style={{color: "#fff", width: "1.5rem", height: "1.5rem", right:0, top: 0, transform:"translate(25% 25%)"}}>0</div></Button>
+        <Button style={{width: "3rem", height: "3rem", position: "relative"}} variant="outline-primary" className="rounded-circle"><BsCart2 /> <div className="rounded-circle d-flex justify-content-center align-items-center" style={{color: "#fff", width: "1.5rem", height: "1.5rem",position:"absolute", right:0, top: 0, transform:"translate(25% 25%)"}}>0</div></Button>
       </Container>
     </NavbarBs>
   );
