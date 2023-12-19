@@ -1,4 +1,4 @@
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, Spinner, Stack } from "react-bootstrap";
 import { useProductContext } from "../data/data";
 import { StoreItem } from "../components/StoreItem";
 
@@ -9,7 +9,10 @@ const Store = () => {
       <h1>Store</h1>
       <Row md={2} xs={1} lg={3} className="g-3">
         {products.length === 0 ? (
-          <h1>Loading...</h1>
+          <div style={{height: "80vh", width:"100%", display:"grid", placeItems: "center"}}>
+
+            <Stack direction="horizontal" gap={2} >Loading <Spinner animation="border"  /></Stack>
+          </div>
         ) : (
           products?.map((product) => {
             return (
