@@ -12,9 +12,10 @@ const getProducts = async (): Promise<Product[]> => {
   try {
     const request = await fetch("https://fakestoreapi.com/products/");
     const response = await request.json();
-    const data: any = await response;
-
-    products.push(data);
+    const data: any[] = await response;
+    data.forEach((product) => {
+      products.push(product);
+    });
     console.log(products);
   } catch (error) {
     console.error(error);
