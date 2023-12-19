@@ -32,9 +32,9 @@ const Store = () => {
     <>
       <h1>Store</h1>
       <Row md={2} xs={1} lg={3} className="g-3">
-        {products?.map((product, index) => {
+        {products?.map((product) => {
           return (
-            <Col key={index}>
+            <Col key={product.id}>
               <StoreItem {...product} />
             </Col>
           );

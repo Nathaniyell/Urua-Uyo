@@ -1,6 +1,6 @@
 const CURRENCY_FORMATTER = new Intl.NumberFormat(undefined, {
     currency: "USD",
-    // currency: "NGN",
+    // currency: "NGN", for Nigerian symbol
     style: "currency"
 })
 
