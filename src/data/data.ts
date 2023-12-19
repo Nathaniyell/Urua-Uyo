@@ -1,12 +1,18 @@
-import { useEffect } from "react";
+interface Product {
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  category: string;
+  image: string;
+}
 
-const products:any[] = [];
-
-const getProducts = async () => {
+const getProducts = async (): Promise<Product[]> => {
+  const products: Product[] = [];
   try {
     const request = await fetch("https://fakestoreapi.com/products/");
     const response = await request.json();
-    const data = await response;
+    const data: Product[] = await response;
 
     products.push(data[0]);
     console.log(products);
@@ -14,10 +20,7 @@ const getProducts = async () => {
     console.error(error);
   }
 
-
+  return products;
 };
-useEffect(() => {
-  getProducts();
-});
 
-export default products
+export default getProducts;
