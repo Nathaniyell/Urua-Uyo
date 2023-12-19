@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { useProductContext } from "../data/data";
 import { StoreItem } from "../components/StoreItem";
