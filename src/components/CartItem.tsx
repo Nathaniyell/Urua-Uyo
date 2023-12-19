@@ -22,10 +22,10 @@ if(item == null)return null
         <div>
             {item.title} {quantity>1 && <span className="muted" style={{fontSize: ".65rem"}}>x{quantity}</span>}
         </div>
-        <div className="muted" style={{fontSize: ".75rem"}}>{formatCurrency(item.price)}</div>
+        <div className="muted" style={{fontSize: ".7rem"}}>{formatCurrency(item.price)}</div>
     </div>
     <div>{formatCurrency(item.price * quantity)}</div>
-    <Button variant="danger" onClick={()=>removeFromCart(item.id)} size="sm">x</Button>
+    <Button variant="danger" onClick={()=>removeFromCart(item.id)} size="sm" className="ms-2">&times;</Button>
   </Stack>
   )
 }
