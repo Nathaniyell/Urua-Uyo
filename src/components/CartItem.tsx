@@ -17,12 +17,12 @@ if(item == null)return null
 
   return (
   <Stack direction="horizontal" className="flex align-items-center">
-    <img src={item.image} style={{width: "150px", height: "80px", objectFit: "contain"}} />
+    <img src={item.image} style={{width: "125px", height: "75px", objectFit: "contain"}} />
     <div className="me-auto">
         <div>
-            {item.title} {quantity>1 && <span className="muted" style={{fontSize: ".65rem"}}>x{quantity}</span>}
+           <span style={{fontSize: "14px"}}> {item.title} </span>{quantity>1 && <span className="muted" style={{fontSize: ".65rem"}}>x{quantity}</span>}
         </div>
-        <div className="muted" style={{fontSize: ".7rem"}}>{formatCurrency(item.price)}</div>
+        <div className="muted" style={{fontSize: ".75rem"}}>{formatCurrency(item.price)}</div>
     </div>
     <div>{formatCurrency(item.price * quantity)}</div>
     <Button variant="danger" onClick={()=>removeFromCart(item.id)} size="sm" className="ms-2">&times;</Button>
