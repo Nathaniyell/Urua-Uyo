@@ -1,9 +1,22 @@
-import React from 'react'
-
+import { Col, Row } from "react-bootstrap";
+import products from "../data/data";
 const Store = () => {
   return (
-    <div>Store</div>
-  )
-}
+  <>
+  <h1>Store</h1>
+    <Row >
+      {
+        products.map(product=>{
+          const {id, image,title,price} = product
+          return(
 
-export default Store
+            <Col></Col> 
+          )
+        })
+      }
+    </Row>
+  </>
+  )
+};
+
+export default Store;

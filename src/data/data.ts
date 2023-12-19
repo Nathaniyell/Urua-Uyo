@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const products:String[] = [];
+const products:any[] = [];
 
 const getProducts = async () => {
   try {
@@ -8,11 +8,13 @@ const getProducts = async () => {
     const response = await request.json();
     const data = await response;
 
-    products.push(data);
+    products.push(data[0]);
     console.log(products);
   } catch (error) {
     console.error(error);
   }
+
+
 };
 useEffect(() => {
   getProducts();
