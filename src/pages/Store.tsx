@@ -11,7 +11,7 @@ const Store = () => {
         {products.length === 0 ? (
           <div style={{height: "80vh", width:"100%", display:"grid", placeItems: "center"}}>
 
-            <Stack direction="horizontal" gap={2} >Loading <Spinner animation="border"  /></Stack>
+            <Stack direction="horizontal" gap={3} ><span className="fs-1">Loading</span> <Spinner animation="border" variant="primary"  /></Stack>
           </div>
         ) : (
           products?.map((product) => {
