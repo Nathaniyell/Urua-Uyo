@@ -1,33 +1,13 @@
 import { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
-import getProducts from "../data/data";
+import { useProductContext } from "../data/data";
 import { StoreItem } from "../components/StoreItem";
 
-interface Product {
-  id: number;
-  title: string;
-  price: number;
-  description: string;
-  category: string;
-  image: string;
-}
+
 
 const Store = () => {
-  const [products, setProducts] = useState<Product[]>();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const fetchedProducts = await getProducts();
-        setProducts(fetchedProducts);
-      } catch (error) {
-        console.error("Error fetching products:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
+const { products } = useProductContext()
   return (
     <>
       <h1>Store</h1>

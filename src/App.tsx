@@ -5,9 +5,11 @@ import Store from "./pages/Store";
 import { Container } from "react-bootstrap";
 import Navbar from "./components/Navbar";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext";
+import { ProductProvider } from "./data/data";
 
 const App = () => {
   return (
+    <ProductProvider>
     <ShoppingCartProvider>
     <Navbar />
     <Container className="mb-4 bg-light">
@@ -18,6 +20,7 @@ const App = () => {
       </Routes>
     </Container>
     </ShoppingCartProvider>
+    </ProductProvider>
   );
 };
 
