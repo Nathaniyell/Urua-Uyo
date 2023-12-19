@@ -29,15 +29,15 @@ export const StoreItem = ({ id, title, price, image }: StoreItemProps) => {
           {quantity === 0 ? (
             <Button className=" w-100">Add to Cart</Button>
           ) : (
-            <div className="d-flex align-items-center flex-column" style={{gap: ".5rem"}}>
-                <div className="d-flex justify-content-between align-items-center" style={{gap: ".5rem"}}>
-                    <Button>-</Button>
+            <div className="d-flex align-items-center flex-column" style={{gap: "1rem"}}>
+                <div className="d-flex justify-content-between align-items-center" style={{gap: "2rem"}}>
+                    <Button size="sm">-</Button>
                     <div>
-                        <span className="fs-4">{quantity}</span> in cart
+                        <span className="fs-5">{quantity}</span> in cart
                     </div>
-                    <Button>+</Button>
+                    <Button size="sm">+</Button>
                 </div>
-                <Button variant="danger">Remover</Button>
+                <Button variant="danger" size="sm">Remove</Button>
             </div>
           )}
         </div>
