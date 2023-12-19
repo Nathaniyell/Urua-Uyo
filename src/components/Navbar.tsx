@@ -27,7 +27,7 @@ const Navbar = () => {
             variant="outline-primary"
             className="rounded-circle"
           >
-            <BsCart2 />{" "}
+            <BsCart2 />
             <div
               className="rounded-circle bg-danger d-flex justify-content-center align-items-center"
               style={{
