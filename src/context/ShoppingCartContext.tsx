@@ -1,4 +1,5 @@
 import { ReactNode, createContext, useContext, useState } from "react";
+import ShoppingCart from "../components/ShoppingCart";
 
 // Define the type for your shopping cart context
 type ShoppingCartProviderProps = {
@@ -15,6 +16,7 @@ cartQuantity: number
 cartItems:CartItem[]
 openCart:()=>void
 closeCart:()=>void
+cartIsOpen: boolean
 
 };
 
@@ -97,10 +99,12 @@ const cartQuantity = cartItems.reduce((quantity, item) => quantity + item.quanti
         cartItems,
         cartQuantity,
         openCart,
-        closeCart
+        closeCart,
+        cartIsOpen
       }}
     >
       {children}
+      <ShoppingCart />
     </ShoppingCartContext.Provider>
   );
 }
