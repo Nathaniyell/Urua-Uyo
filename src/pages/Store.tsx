@@ -32,11 +32,13 @@ const Store = () => {
     <>
       <h1>Store</h1>
       <Row md={2} xs={1} lg={3} className="g-3">
-        {products?.map((product) => (
-          <Col key={product.id}>
-            <StoreItem {...product} />
-          </Col>
-        ))}
+        {products?.map((product, index) => {
+          return (
+            <Col key={index}>
+              <StoreItem {...product} />
+            </Col>
+          );
+        })}
       </Row>
     </>
   );
