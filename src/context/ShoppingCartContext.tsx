@@ -101,20 +101,26 @@ export function ShoppingCartProvider({
 
   // Function to decrease the quantity of a specific item in the cart
   function decreaseCartQuantity(id: number) {
+    // Use the setCartItems function to update the cartItems state based on the current items
     setCartItems((currItems) => {
+      // Check if the item with the given id is present in the current items
       if (currItems.find((item) => item.id === id)?.quantity === 1) {
+        // If the item is present and its quantity is 1, remove the item from the array
         return currItems.filter((item) => item.id !== id);
       } else {
+        // If the item is present and its quantity is more than 1, decrement the quantity by 1
         return currItems.map((item) => {
           if (item.id === id) {
             return { ...item, quantity: item.quantity - 1 };
           } else {
+            // If the item id doesn't match, leave the item unchanged
             return item;
           }
         });
       }
     });
   }
+  
 
   // Function to remove a specific item from the cart
   const removeFromCart = (id: number) => {
