@@ -124,11 +124,13 @@ export function ShoppingCartProvider({
 
   // Function to remove a specific item from the cart
   const removeFromCart = (id: number) => {
+    // Use the setCartItems function to update the cartItems state based on the current items
     setCartItems((currItems) => {
+      // Use the filter function to create a new array excluding the item with the provided id
       return currItems.filter((item) => item.id !== id);
     });
   };
-
+  
   // Provide the shopping cart context to its children
   return (
     <ShoppingCartContext.Provider
