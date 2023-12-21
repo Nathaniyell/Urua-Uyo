@@ -15,11 +15,11 @@ function CarouselFadeExample({imageSrc,imageTitle}: ImageProps) {
       </Carousel.Item>
       <Carousel.Item>
         
-    
+      <img src={imageSrc} alt={imageTitle} />
       </Carousel.Item>
       <Carousel.Item>
         
-       
+      <img src={imageSrc} alt={imageTitle} />
       </Carousel.Item>
     </Carousel>
   );
