@@ -3,8 +3,8 @@ import Carousel from 'react-bootstrap/Carousel';
 
 type ImageProps ={
     imageSrc1: string
-    imageSrc1: string
-    imageSrc1: string
+    imageSrc2: string
+    imageSrc3: string
     imageTitle: string
 }
 
