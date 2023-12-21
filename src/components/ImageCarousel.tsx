@@ -1,11 +1,11 @@
 import Carousel from 'react-bootstrap/Carousel';
 
 
-function CarouselFadeExample({imageSrc:String, imageTitle: String}) {
+function CarouselFadeExample({imageSrc,imageTitle}) {
   return (
     <Carousel fade>
       <Carousel.Item>
-        <img src='' alt='' />
+        <img src={imageSrc} alt={imageTitle} />
     
       </Carousel.Item>
       <Carousel.Item>
