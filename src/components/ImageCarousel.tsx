@@ -21,13 +21,13 @@ function ImageCarousel({
   return (
     <Carousel fade>
       <Carousel.Item>
-        <Image src={imageSrc1} alt={imageTitle1} />
+        <Image height='300px' src={imageSrc1} alt={imageTitle1} />
       </Carousel.Item>
       <Carousel.Item>
-        <Image src={imageSrc2} alt={imageTitle2} />
+        <Image height='300px' src={imageSrc2} alt={imageTitle2} />
       </Carousel.Item>
       <Carousel.Item>
-        <Image src={imageSrc3} alt={imageTitle3} />
+        <Image height='300px' src={imageSrc3} alt={imageTitle3} />
       </Carousel.Item>
     </Carousel>
   );
