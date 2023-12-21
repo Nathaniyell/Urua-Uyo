@@ -2,11 +2,11 @@ import Carousel from 'react-bootstrap/Carousel';
 
 
 type ImageProps ={
-    imageSrc: String
-    imageTitle: String
+    imageSrc: string
+    imageTitle: string
 }
 
-function CarouselFadeExample({imageSrc,imageTitle}: ImageProps) {
+function ImageCarousel({imageSrc,imageTitle}: ImageProps) {
   return (
     <Carousel fade>
       <Carousel.Item>
@@ -25,4 +25,4 @@ function CarouselFadeExample({imageSrc,imageTitle}: ImageProps) {
   );
 }
 
-export default CarouselFadeExample;
+export default ImageCarousel;
