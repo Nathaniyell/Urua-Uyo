@@ -19,15 +19,24 @@ function ImageCarousel({
   imageTitle3,
 }: ImageProps) {
   return (
-    <Carousel fade>
+    <Carousel fade controls={false} pause="hover">
       <Carousel.Item>
         <Image height='400px' style={{objectFit: "cover"}} src={imageSrc1} alt={imageTitle1} />
+        <Carousel.Caption>
+            <h4>{imageTitle1}</h4>
+        </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <Image height='400px' style={{objectFit: "cover"}} src={imageSrc2} alt={imageTitle2} />
+        <Carousel.Caption>
+            <h4>{imageTitle2}</h4>
+        </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <Image height='400px' style={{objectFit: "cover"}} src={imageSrc3} alt={imageTitle3} />
+        <Carousel.Caption>
+            <h4>{imageTitle3}</h4>
+        </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
   );
