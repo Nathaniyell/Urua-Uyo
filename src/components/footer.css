@@ -1,6 +1,14 @@
 .footer-btn{
-    border: 1px solid #552d1ed9;
-    color: #552d1ed9;
+    border: 1px solid #fff;
+    color: #fff;
     outline: none;
-    background-color: #b38372d9;
+    background-color:#3a1203d9 ;
+    padding: 8px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+input{
+    padding: 8px;
+    width: 30%;
 }
