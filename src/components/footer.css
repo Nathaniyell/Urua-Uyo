@@ -1,14 +1,30 @@
-.footer-btn{
-    border: 1px solid #fff;
-    color: #fff;
-    outline: none;
-    background-color:#3a1203d9 ;
-    padding: 8px;
-    border-radius: 5px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+.footer-btn {
+  border: 1px solid #fff;
+  color: #fff;
+  outline: none;
+  background-color: #3a1203d9;
+  padding: 8px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
-input{
-    padding: 8px;
-    width: 30%;
+.footer__input {
+  padding: 5px;
+  width: 30%;
+  color: #552d1ed9;
+  outline: none;
+}
+.social__icons{
+    display: grid;
+    place-items: center;
+    border: 1px solid white;
+    padding: 10px;
+    color: #552d1ed9;
+    transition: all ease-in-out 0.8s;
+    box-shadow: 5px 5px 10px #552d1ed9 inset;
+    font-size: 20px;
+}
+.social__icons:hover{
+    background-color: #552d1ed9;
+    color: #fff;
 }

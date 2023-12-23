@@ -11,12 +11,12 @@
   display: grid;
   place-items: center;
 }
-button.button {
+.Home__btn {
   background-color: #552d1ed9 !important;
   all: unset;
   color: white;
-  transition: all ease-in-out;
+  transition: all ease-in-out 1s;
 }
-button:hover {
+.Home__btn:hover {
   transform: scale(0.8);
 }
