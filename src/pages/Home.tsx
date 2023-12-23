@@ -1,5 +1,8 @@
+import { Button } from "react-bootstrap";
 import ImageCarousel from "../components/ImageCarousel"
 import { useProductContext } from "../data/data"
+import { LinkContainer } from "react-router-bootstrap";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
   const { products } = useProductContext();
@@ -14,7 +17,10 @@ const Home = () => {
     <div className="d-flex align-items-center justify-content-between container">
     <div>
       <h1>Discover our latest collection</h1>
-      <p className="w-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus aspernatur, voluptates excepturi quae perspiciatis deserunt! Quod corporis impedit aperiam ad ducimus recusandae assumenda, illo libero tempora quaerat sint quos provident? Asperiores sequi sit quis impedit nemo, beatae itaque nobis assumenda mollitia accusantium debitis tenetur rerum ullam veniam.</p>
+      <p className="w-75 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. At nulla dicta nesciunt ullam ex reiciendis velit hic cum quas rerum tempore veniam, possimus repudiandae exercitationem, excepturi pariatur ad quisquam illo porro modi consectetur! Numquam odio modi eos, debitis vitae ratione nemo quo sit rem id! Doloribus consequatur modi obcaecati optio dolore deleniti officiis, magnam aut, dignissimos earum neque suscipit, non ab repudiandae ipsum veritatis nostrum a at facere nisi. Nulla explicabo ullam consectetur! Animi, natus!</p>
+      <LinkContainer to="/store">
+  <Button variant="outline-primary">Discover More</Button>
+</LinkContainer>
     </div>
     <ImageCarousel 
     imageTitle1={title1}

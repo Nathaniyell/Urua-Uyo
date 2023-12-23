@@ -1,5 +1,5 @@
 import Carousel from "react-bootstrap/Carousel";
-import Image from 'react-bootstrap/Image';
+import Image from "react-bootstrap/Image";
 
 type ImageProps = {
   imageSrc1: string;
@@ -21,14 +21,29 @@ function ImageCarousel({
   return (
     <Carousel fade controls={false} pause="hover">
       <Carousel.Item>
-        <Image height='400px' style={{objectFit: "cover"}} src={imageSrc1} alt={imageTitle1} />
-              </Carousel.Item>
+        <Image
+          height="400px"
+          style={{ objectFit: "cover" }}
+          src={imageSrc1}
+          alt={imageTitle1}
+        />
+      </Carousel.Item>
       <Carousel.Item>
-        <Image height='400px' style={{objectFit: "cover"}} src={imageSrc2} alt={imageTitle2} />
-              </Carousel.Item>
+        <Image
+          height="400px"
+          style={{ objectFit: "cover" }}
+          src={imageSrc2}
+          alt={imageTitle2}
+        />
+      </Carousel.Item>
       <Carousel.Item>
-        <Image height='400px' style={{objectFit: "cover"}} src={imageSrc3} alt={imageTitle3} />
-              </Carousel.Item>
+        <Image
+          height="400px"
+          style={{ objectFit: "cover" }}
+          src={imageSrc3}
+          alt={imageTitle3}
+        />
+      </Carousel.Item>
     </Carousel>
   );
 }
