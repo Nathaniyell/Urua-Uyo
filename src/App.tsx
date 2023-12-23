@@ -6,6 +6,7 @@ import { Container } from "react-bootstrap";
 import Navbar from "./components/Navbar";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext";
 import { ProductProvider } from "./data/data";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
             <Route path="/store" element={<Store />} />
           </Routes>
         </Container>
+        <Footer />
       </ShoppingCartProvider>
     </ProductProvider>
   );

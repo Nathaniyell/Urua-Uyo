@@ -32,7 +32,7 @@ const Home = () => {
           </LinkContainer>
         </Col>
         <div className="carousel__div">
-          <Col xs={{ order: "first" }} md={{ order: "last" }}>
+          <Col xs={{ order: "first"}}>
             {products.length === 0 ? (
               <div>
                 <Spinner animation="border" variant="primary" />
