@@ -1,6 +1,6 @@
 import Carousel from "react-bootstrap/Carousel";
 import Image from "react-bootstrap/Image";
-
+import "../pages/Home/home.css"
 
 type ImageProps = {
   imageSrc1: string;
@@ -21,30 +21,32 @@ function ImageCarousel({
 }: ImageProps) {
   return (
     <Carousel fade controls={false} pause="hover">
-      <Carousel.Item>
+      <Carousel.Item className="carousel__Item">
         <Image
           height="400px"
           style={{ objectFit: "cover" }}
           src={imageSrc1}
           alt={imageTitle1}
         />
+  
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item className="carousel__Item">
         <Image
-        className="mx-auto carousel-img"
           height="400px"
           style={{ objectFit: "cover" }}
           src={imageSrc2}
           alt={imageTitle2}
         />
+  
       </Carousel.Item>
-      <Carousel.Item>
+      <Carousel.Item className="carousel__Item">
         <Image
           height="400px"
           style={{ objectFit: "cover" }}
           src={imageSrc3}
           alt={imageTitle3}
         />
+  
       </Carousel.Item>
     </Carousel>
   );

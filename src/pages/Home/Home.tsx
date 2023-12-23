@@ -1,7 +1,8 @@
-import { Button, Col, Row, Spinner, Stack } from "react-bootstrap";
+import { Button, Col, Row, Spinner } from "react-bootstrap";
 import ImageCarousel from "../../components/ImageCarousel"
 import { useProductContext } from "../../data/data"
 import { LinkContainer } from "react-router-bootstrap";
+import "./home.css"
 
 
 const Home = () => {
@@ -14,19 +15,23 @@ const Home = () => {
   
   
   return (
-    <Row md={2} xs={1} className="g-3">
-    <Col>
+    <div className="home__body">
+    <Row md={2} xs={1} className="g-4 mx-auto bg-danger">
+    <Col className="mr-md-5">
       <h1>Discover our latest collection</h1>
       <p style={{textAlign: "justify"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. At nulla dicta nesciunt ullam ex reiciendis velit hic cum quas rerum tempore veniam, possimus repudiandae exercitationem, excepturi pariatur ad quisquam illo porro modi consectetur! Numquam odio modi eos, debitis vitae ratione nemo quo sit rem id! Doloribus consequatur modi obcaecati optio dolore deleniti officiis, magnam aut, dignissimos earum neque suscipit, non ab repudiandae ipsum veritatis nostrum a at facere nisi. Nulla explicabo ullam consectetur! Animi, natus!</p>
       <LinkContainer to="/store">
   <Button variant="outline-primary">Discover More</Button>
 </LinkContainer>
     </Col>
-    <Col xs={{order: "first"}}>
-    {products.length === 0 ? (
-          <div style={{display:"grid", placeItems: "center"}}>
+    <div className="carousel__div">
 
-            <Stack direction="horizontal" gap={3} ><span className="fs-1">Loading</span> <Spinner animation="border" variant="primary"  /></Stack>
+    
+    <Col xs={{order: "first"}} md={{order: "last"}}>
+    {products.length === 0 ? (
+          <div className="d-flex align-items-center justify-content-center">
+
+             <Spinner animation="border" variant="primary" />
           </div>
         ):(
 <ImageCarousel 
@@ -40,7 +45,9 @@ const Home = () => {
         )}
     
      </Col>
+     </div>
     </Row>
+    </div>
   )
 }
 
