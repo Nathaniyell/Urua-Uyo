@@ -1,8 +1,13 @@
-
-.carousel__Item{
-    background-color: blue;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+.carousel__Item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
+.Home__Grid {
+  place-items: center;
+}
+.carousel__div {
+  display: grid;
+  place-items: center;
+}
