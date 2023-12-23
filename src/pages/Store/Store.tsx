@@ -1,6 +1,6 @@
 import { Col, Row, Spinner, Stack } from "react-bootstrap";
-import { useProductContext } from "../data/data";
-import { StoreItem } from "../components/StoreItem";
+import { useProductContext } from "../../data/data";
+import { StoreItem } from "../../components/StoreItem";
 
 const Store = () => {
   const { products } = useProductContext();

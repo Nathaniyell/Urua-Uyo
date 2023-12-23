@@ -1,6 +1,7 @@
 import Carousel from "react-bootstrap/Carousel";
 import Image from "react-bootstrap/Image";
 
+
 type ImageProps = {
   imageSrc1: string;
   imageSrc2: string;
@@ -30,6 +31,7 @@ function ImageCarousel({
       </Carousel.Item>
       <Carousel.Item>
         <Image
+        className="mx-auto carousel-img"
           height="400px"
           style={{ objectFit: "cover" }}
           src={imageSrc2}
