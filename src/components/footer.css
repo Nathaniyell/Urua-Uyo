@@ -7,12 +7,14 @@
   border-radius: 5px;
   letter-spacing: 1px;
   text-transform: uppercase;
+  /* width: 100%; */
 }
 .footer__input {
   padding: 5px;
-  width: 30%;
-  color: #552d1ed9;
+   color: #552d1ed9;
+   display: block;
   outline: none;
+  /* width: 100%; */
 }
 .social__icons{
     display: grid;

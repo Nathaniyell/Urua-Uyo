@@ -7,17 +7,17 @@ import { FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div style={{backgroundColor: "#552d1ed9"}}>
-    <Row xs={1} md={3} className="p-4 text-white">
+    <div className="w-100 p-1 p-md-5" style={{backgroundColor: "#552d1ed9"}}>
+    <Row xs={2} md={3} className="text-white mb-5">
     <Col>
         <h1 className="fs-2 text-white">URUA UYO</h1>
         </Col>
         <Col>
         <form action="">
-            <label htmlFor="" className="my-2">Get notified of new arrivals</label>
+            <h5>Get notified of new arrivals</h5>
             <div>
-                <input className="footer__input" type="email" placeholder="johndoe@email.com" />
-                <button className="footer-btn" type="submit">Submit</button>
+                <input className="footer__input mb-2 w-75" type="email" placeholder="johndoe@email.com" />
+                <button className="footer-btn w-75" type="submit">Submit</button>
             </div>
         </form>
         </Col>
