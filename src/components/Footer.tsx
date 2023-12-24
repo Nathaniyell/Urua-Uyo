@@ -16,8 +16,8 @@ const Footer = () => {
         <form action="" className="my-3 my-md-0">
             <h5>Get notified of new arrivals</h5>
             <div>
-                <input className="footer__input mb-2 w-75 w-md-100" type="email" placeholder="johndoe@email.com" />
-                <button className="footer-btn w-75 w-md-100" type="submit">Submit</button>
+                <input className="footer__input mb-2 w-md-75 w-100" type="email" placeholder="johndoe@email.com" />
+                <button className="footer-btn w-md-75 w-100" type="submit">Submit</button>
             </div>
         </form>
         </Col>
