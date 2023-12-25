@@ -20,12 +20,12 @@ if(item == null)return null
     <img src={item.image} style={{width: "125px", height: "75px", objectFit: "contain"}} />
     <div className="me-auto">
         <div>
-           <span style={{fontSize: "14px"}}> {item.title} </span>{quantity>1 && <span className="muted" style={{fontSize: ".65rem", fontWeight: "bold"}}>x{quantity}</span>}
+           <span style={{fontSize: "14px"}}> {item.title} </span>{quantity>1 && <span className="muted" style={{fontSize: ".7rem", fontWeight: "bold"}}>x{quantity}</span>}
         </div>
         <div className="muted mb-4" style={{fontSize: ".75rem"}}>{formatCurrency(item.price)}</div>
         <Stack direction="horizontal" gap={4}>
-            <Button onClick={()=>decreaseCartQuantity(item.id)} size="sm" variant="outline-danger">-</Button>
-            <Button onClick={()=>increaseCartQuantity(item.id)} size="sm" variant="outline-success">+</Button>
+            <Button style={{display: "grid", placeItems: "center"}} className="py-0 px-2" onClick={()=>decreaseCartQuantity(item.id)} size="sm" variant="outline-danger">-</Button>
+            <Button style={{display: "grid", placeItems: "center"}} className="py-0 px-2" onClick={()=>increaseCartQuantity(item.id)} size="sm" variant="outline-success">+</Button>
         </Stack>
     </div>
     <div>{formatCurrency(item.price * quantity)}</div>
