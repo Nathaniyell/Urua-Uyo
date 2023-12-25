@@ -15,7 +15,7 @@
   background-color: #552d1ed9 !important;
   all: unset;
   color: white;
-  transition: all ease-in-out 1s;
+  transition: all ease-in-out .3s;
 }
 .Home__btn:hover {
   transform: scale(0.8);

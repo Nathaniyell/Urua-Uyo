@@ -15,7 +15,7 @@ export const StoreItem = ({ id, title, price, image }: StoreItemProps) => {
 const {getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart} = useShoppingCart()
 const quantity = getItemQuantity(id)
   return (
-    <Card key={id} className="h-100">
+    <Card key={id} className="h-100 border-0 shadow-sm">
       <Card.Img
         variant="top"
         src={image}
