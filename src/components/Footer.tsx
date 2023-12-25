@@ -40,7 +40,7 @@ const Footer = () => {
 
     </Col>
     </Row>
-    <div className="d-flex flex-column flex-md-row align-items-center justify-content-between mt-5">
+    <div className="d-flex flex-column flex-md-row align-items-center justify-content-between" style={{marginTop: "6rem"}}>
     <div className="d-flex justify-content-around align-items-center">
         {[<MdFacebook />, <BsTwitterX />, <FaInstagram />].map((icon, index)=>{
             return(
