@@ -14,7 +14,7 @@ const App = () => {
     <ProductProvider>
       <ShoppingCartProvider>
         <Navbar />
-        <Container className="mb-4 bg-light">
+        <Container className="mb-4" style={{backgroundColor: "#f5f2f1"}}>
           <Routes>
             <Route path="/" element={<Home />} />
 
