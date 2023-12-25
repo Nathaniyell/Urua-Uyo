@@ -10,6 +10,10 @@ import visa from "../assets/visa.png"
 
 
 const Footer = () => {
+    const submitHandler = (e: React.FormEvent<HTMLFormElement>): void => {
+        e.preventDefault();
+        // Additional logic for form submission if needed
+      };
   return (
     <footer
       className="w-100 p-3 p-md-3"
@@ -29,7 +33,7 @@ const Footer = () => {
         </Col>
 
         <Col>
-          <form action="" className="my-3 my-md-0">
+          <form onSubmit={submitHandler} className="my-3 my-md-0">
             <h5 className="text-center mb-3">Get notified of new arrivals</h5>
             <div>
               <input
