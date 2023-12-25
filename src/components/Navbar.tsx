@@ -19,7 +19,7 @@ const Navbar = () => {
            <FaCartShopping />
           </span>
         </NavbarBs.Brand>
-        <Nav fill variant="underline">
+        <Nav fill variant="underline" className="mx-auto">
           <Nav.Link to={"/"} as={NavLink} >
             Home
           </Nav.Link>
