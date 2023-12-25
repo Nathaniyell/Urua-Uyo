@@ -32,7 +32,7 @@ const quantity = getItemQuantity(id)
           {quantity === 0 ? (
             <Button className=" w-100" onClick={()=>increaseCartQuantity(id)}>Add to Cart</Button>
           ) : (
-            <div className="d-flex align-items-center flex-column" style={{gap: "1rem"}}>
+            <div className="d-flex align-items-center flex-column" style={{gap: "2rem"}}>
                 <div className="d-flex justify-content-between align-items-center" style={{gap: "2rem"}}>
                     <Button size="sm" onClick={()=>decreaseCartQuantity(id)}>-</Button>
                     <div>
