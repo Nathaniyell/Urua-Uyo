@@ -1,32 +1,47 @@
+import { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import "./footer.css";
 import { MdFacebook } from "react-icons/md";
 import { BsTwitterX } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
-import mastercard from '../assets/mastercard.png'
-import verve from "../assets/verve.png"
-import visa from "../assets/visa.png"
-
+import mastercard from "../assets/mastercard.png";
+import verve from "../assets/verve.png";
+import visa from "../assets/visa.png";
+ import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const Footer = () => {
-    const submitHandler = (e: React.FormEvent<HTMLFormElement>): void => {
-        e.preventDefault();
-        // Additional logic for form submission if needed
-      };
+  const [email, setEmail] = useState<string>("");
+
+  const submitHandler = (e: React.FormEvent<HTMLFormElement>): void => {
+    e.preventDefault();
+    console.log(email);
+ toast.success(`Congratulations! ${email} will be notified once new products arrive`)
+    setEmail("");
+  };
+
   return (
     <footer
       className="w-100 p-3 p-md-3"
       style={{ backgroundColor: "#552d1ed9" }}
     >
+         <ToastContainer
+              position="top-center"
+              autoClose={3000}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="colored"
+              hideProgressBar={false}
+            />
       <Row xs={1} md={3} className="text-white justify-content-between mb-5">
         <Col sm={6} md={3} className=" mw-25">
-          <h1
-            className="fs-2 text-white mb-3 d-flex"
-            
-          >
+          <h1 className="fs-2 text-white mb-3 d-flex">
             URUA UYO
-            <span className="fs-6" style={{color: "#fff"}}>
+            <span className="fs-6" style={{ color: "#fff" }}>
               <FaCartShopping />
             </span>
           </h1>
@@ -39,6 +54,8 @@ const Footer = () => {
               <input
                 className="footer__input mb-2 w-100"
                 type="email"
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
                 placeholder="johndoe@email.com"
               />
               <button className="footer-btn w-100" type="submit">
