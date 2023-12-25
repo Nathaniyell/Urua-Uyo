@@ -7,7 +7,7 @@ const Navbar = () => {
   const { openCart, cartQuantity } = useShoppingCart();
 
   return (
-    <NavbarBs sticky="top">
+    <NavbarBs>
       <Container className="bg-white shadow-sm mb-3 py-2">
         <NavbarBs.Brand style={{color: "#3a1203d9", display: "flex"}} className="fs-2 relative" to={"/"} as={NavLink}>
           URUA 
@@ -19,11 +19,11 @@ const Navbar = () => {
            <FaCartShopping />
           </span>
         </NavbarBs.Brand>
-        <Nav className="m-auto">
-          <Nav.Link to={"/"} as={NavLink}>
+        <Nav fill sticky="top" variant="underline">
+          <Nav.Link to={"/"} as={NavLink} >
             Home
           </Nav.Link>
-          <Nav.Link to={"/store"} as={NavLink}>
+          <Nav.Link to={"/store"} as={NavLink} >
             Store
           </Nav.Link>
         </Nav>
