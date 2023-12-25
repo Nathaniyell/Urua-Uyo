@@ -1,4 +1,4 @@
-import { Button, Col, Row, Spinner } from "react-bootstrap";
+import { Col, Row, Spinner } from "react-bootstrap";
 import ImageCarousel from "../../components/ImageCarousel";
 import { useProductContext } from "../../data/data";
 import { LinkContainer } from "react-router-bootstrap";
