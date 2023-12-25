@@ -4,9 +4,10 @@ import { MdFacebook } from "react-icons/md";
 import { BsTwitterX } from "react-icons/bs";
 import { FaInstagram } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
-import mastercard from "../assets/mastercard-svgrepo-com.svg";
-import verve from "../assets/verve-3-svgrepo-com.svg";
-import visa from "../assets/visa-fill-svgrepo-com.svg";
+import mastercard from '../assets/mastercard.png'
+import verve from "../assets/verve.png"
+import visa from "../assets/visa.png"
+
 
 const Footer = () => {
   return (
