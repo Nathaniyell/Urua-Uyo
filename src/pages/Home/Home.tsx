@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <div className="home__body">
       <Row md={2} xs={1} className="g-4 Home__Grid">
-        <Col className="mr-md-5">
+        <Col className="mr-md-5" md={{ order: "first"}} xs={{ order: "last"}}>
           <h1>Discover our latest collection</h1>
           <p style={{ textAlign: "justify" }}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. At nulla
@@ -32,7 +32,7 @@ const Home = () => {
           </LinkContainer>
         </Col>
         <div className="carousel__div">
-          <Col xs={{ order: "first"}}>
+          <Col md={{ order: "last"}} xs={{ order: "first"}}>
             {products.length === 0 ? (
               <div>
                 <Spinner animation="border" variant="primary" />
