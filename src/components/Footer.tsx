@@ -25,7 +25,7 @@ const Footer = () => {
             </div>
         </form>
         </Col>
-    <Col className="my-3 d-flex flex-column bg-success justify-content-between my-md-0">
+    <Col className="my-3 d-flex flex-column justify-content-between my-md-0">
     <h5 className="text-md-center mb-3 text-center">Verified Payment Methods</h5>
     <div className="d-flex flex-md-row align-items-center">
         {
