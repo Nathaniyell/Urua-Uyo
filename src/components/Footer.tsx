@@ -13,10 +13,10 @@ const Footer = () => {
   return (
     <footer className="w-100 p-3 p-md-5" style={{backgroundColor: "#552d1ed9"}}>
     <Row xs={1} md={3} className="text-white mb-5">
-    <Col>
-        <h1 className="fs-2 text-white mb-3">URUA UYO</h1>
-        </Col>
-        <Col className="my-3 my-md-0">
+ 
+        <h1 className="fs-2 text-white mb-3 d-inline w-25">URUA UYO</h1>
+      
+        <Col className="my-3 my-md-0 me-0 me-md-5">
     <h5 className="text-md-center mb-3 text-center">Verified Payment Methods</h5>
     <div className="d-flex flex-row align-items-center justify-content-between">
         {
