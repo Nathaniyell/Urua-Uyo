@@ -1,7 +1,7 @@
-
 import { Button, Container, Nav, Navbar as NavbarBs } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { BsCart2 } from "react-icons/bs";
+import { FaCartShopping } from "react-icons/fa6";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 const Navbar = () => {
   const { openCart, cartQuantity } = useShoppingCart();
@@ -9,7 +9,16 @@ const Navbar = () => {
   return (
     <NavbarBs sticky="top">
       <Container className="bg-white shadow-sm mb-3 py-2">
-          <NavbarBs.Brand className="fs-2" to={"/"} as={NavLink}>URUA UYO</NavbarBs.Brand>
+        <NavbarBs.Brand style={{color: "#3a1203d9", display: "flex"}} className="fs-2 relative" to={"/"} as={NavLink}>
+          URUA 
+          
+          UYO
+          <span
+            className="fs-6"
+                     >
+           <FaCartShopping />
+          </span>
+        </NavbarBs.Brand>
         <Nav className="m-auto">
           <Nav.Link to={"/"} as={NavLink}>
             Home
