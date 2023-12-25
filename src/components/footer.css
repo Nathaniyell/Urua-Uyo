@@ -7,30 +7,28 @@
   border-radius: 5px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  /* width: 100%; */
+  transition: all ease-in-out 0.3s;
+}
+.footer-btn:hover{
+   transform: scale(0.9);
 }
 .footer__input {
   padding: 5px;
-   color: #552d1ed9;
-   display: block;
+  color: #552d1ed9;
+  display: block;
   outline: none;
-  /* width: 100%; */
 }
-.social__icons{
-    display: grid;
-    place-items: center;
-    border: 1px solid white;
- width: 40px;
- height: 40px;
-    color: #552d1ed9;
-    transition: all ease-in-out 0.8s;
-    /* box-shadow: 5px 5px 10px #552d1ed9 inset; */
-    font-size: 25px;
+.social__icons {
+  display: grid;
+  place-items: center;
+  border: 1px solid white;
+  width: 40px;
+  height: 40px;
+  color: #552d1ed9;
+  transition: all ease-in-out 0.7s;
+  font-size: 25px;
 }
-.social__icons:hover{
-    background-color: #552d1ed9;
-    color: #fff;
+.social__icons:hover {
+  background-color: #552d1ed9;
+  color: #fff;
 }
-/* .footer__payment{
-    width: ;
-} */
