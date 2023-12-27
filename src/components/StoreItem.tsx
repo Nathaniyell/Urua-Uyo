@@ -3,6 +3,7 @@ import { Card } from "react-bootstrap";
 import { formatCurrency } from "../utilities/formatCurrency";
 import { Button } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContext";
+import {motion} from "framer-motion"
 
 type StoreItemProps = {
   id: number;
@@ -15,6 +16,12 @@ export const StoreItem = ({ id, title, price, image }: StoreItemProps) => {
 const {getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart} = useShoppingCart()
 const quantity = getItemQuantity(id)
   return (
+    <motion.div
+    initial={{y: 100, opacity: 0}}
+                    whileInView={{opacity: 1, y:0}}
+                    transition={{duration:.8, delay: 0.5}}
+                    viewport={{once: true}}
+    >
     <Card key={id} className="h-100 border-0 shadow-sm">
       <Card.Img
         variant="top"
@@ -46,5 +53,6 @@ const quantity = getItemQuantity(id)
         </div>
       </Card.Body>
     </Card>
+    </motion.div>
   );
 };
