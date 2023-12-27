@@ -17,8 +17,9 @@ const Footer = () => {
   const submitHandler = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     console.log(email);
-    if (email === "") return;
-    if (email !== "") {
+    if (email === "") {
+      return;
+    } else if (email !== "") {
       toast.success(
         `Congratulations! ${email} will be notified once new products arrive`
       );
@@ -42,7 +43,11 @@ const Footer = () => {
         theme="colored"
         hideProgressBar={false}
       />
-      <Row xs={1} md={3} className="text-white justify-content-between my-3 my-md-5">
+      <Row
+        xs={1}
+        md={3}
+        className="text-white justify-content-between my-3 my-md-5"
+      >
         <Col sm={6} md={3} className=" mw-25">
           <h1 className="fs-2 text-white mb-3 d-flex">
             URUA UYO
@@ -54,7 +59,9 @@ const Footer = () => {
 
         <Col>
           <form onSubmit={submitHandler} className="my-3 my-md-0">
-            <h5 className="mb-3 fs-4 fw-normal">Get notified of new arrivals</h5>
+            <h5 className="mb-3 fs-4 fw-normal">
+              Get notified of new arrivals
+            </h5>
             <div>
               <input
                 className="footer__input mb-2 w-100 fs-4"
