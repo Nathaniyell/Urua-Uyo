@@ -8,8 +8,8 @@ import { FaCartShopping } from "react-icons/fa6";
 import mastercard from "../assets/mastercard.png";
 import verve from "../assets/verve.png";
 import visa from "../assets/visa.png";
- import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Footer = () => {
   const [email, setEmail] = useState<string>("");
@@ -17,27 +17,32 @@ const Footer = () => {
   const submitHandler = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     console.log(email);
- toast.success(`Congratulations! ${email} will be notified once new products arrive`)
-    setEmail("");
+    if (email === "") return;
+    if (email !== "") {
+      toast.success(
+        `Congratulations! ${email} will be notified once new products arrive`
+      );
+      setEmail("");
+    }
   };
 
   return (
     <footer
-      className="w-100 p-3 p-md-3"
+      className="w-100 p-3 p-md-4"
       style={{ backgroundColor: "#552d1ed9" }}
     >
-         <ToastContainer
-              position="top-center"
-              autoClose={3000}
-              closeOnClick
-              rtl={false}
-              pauseOnFocusLoss
-              draggable
-              pauseOnHover
-              theme="colored"
-              hideProgressBar={false}
-            />
-      <Row xs={1} md={3} className="text-white justify-content-between mb-5">
+      <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+        hideProgressBar={false}
+      />
+      <Row xs={1} md={3} className="text-white justify-content-between my-5">
         <Col sm={6} md={3} className=" mw-25">
           <h1 className="fs-2 text-white mb-3 d-flex">
             URUA UYO
@@ -49,10 +54,10 @@ const Footer = () => {
 
         <Col>
           <form onSubmit={submitHandler} className="my-3 my-md-0">
-            <h5 className="text-center mb-3">Get notified of new arrivals</h5>
+            <h5 className="mb-3 fs-2">Get notified of new arrivals</h5>
             <div>
               <input
-                className="footer__input mb-2 w-100"
+                className="footer__input mb-2 w-100 fs-4"
                 type="email"
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
@@ -65,9 +70,7 @@ const Footer = () => {
           </form>
         </Col>
         <Col className="my-3 d-flex flex-column justify-content-between my-md-0">
-          <h5 className="text-md-center mb-3 text-center">
-            Verified Payment Methods
-          </h5>
+          <h5 className="mb-3 fs-2">Verified Payment Methods</h5>
           <div className="d-flex flex-md-row align-items-center">
             {[mastercard, visa, verve].map((icon, index) => {
               return (
