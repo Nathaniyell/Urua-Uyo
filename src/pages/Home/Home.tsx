@@ -28,7 +28,7 @@ const Home = () => {
             at facere nisi. Nulla explicabo ullam consectetur! Animi, natus!
           </p>
           <LinkContainer to="/store">
-            <button className="p-3 rounded Home__btn">Discover More</button>
+            <button className="p-3  fw-bold rounded Home__btn">Discover More</button>
           </LinkContainer>
         </Col>
         <div className="carousel__div">

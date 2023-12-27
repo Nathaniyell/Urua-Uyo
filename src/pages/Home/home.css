@@ -12,11 +12,12 @@
   place-items: center;
 }
 .Home__btn {
-  background-color: #552d1ed9 !important;
+  background-color: #fff !important;
   all: unset;
-  color: white;
-  transition: all ease-in-out .3s;
+  color: #552d1ed9;
+  border:1px solid #552d1ed9 ;
+  transition: all ease-in-out .2s;
 }
 .Home__btn:hover {
-  transform: scale(0.8);
+  transform: scale(0.9);
 }
