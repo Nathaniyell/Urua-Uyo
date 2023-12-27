@@ -21,7 +21,7 @@ const Footer = () => {
       return;
     } else if (email !== "") {
       toast.success(
-        `Congratulations ${email}! \n You will be notified when our new products arrive`
+        `Congratulations ${email}! \n You will be notified when our new products arrive.`
       );
       setEmail("");
     }
