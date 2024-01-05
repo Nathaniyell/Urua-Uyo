@@ -3,8 +3,30 @@ import ImageCarousel from "../../components/ImageCarousel";
 import { useProductContext } from "../../data/data";
 import { LinkContainer } from "react-router-bootstrap";
 import "./home.css";
+import { useEffect, useState } from "react";
 
 const Home = () => {
+  const [isOnline, setIsOnline] = useState(navigator.onLine);
+
+  useEffect(() => {
+    // Function to update online status
+    const updateOnlineStatus = () => {
+      setIsOnline(navigator.onLine);
+    };
+
+    // Add event listeners for online and offline events
+    window.addEventListener("online", updateOnlineStatus);
+    window.addEventListener("offline", updateOnlineStatus);
+
+    // Clean up event listeners on component unmount
+    return () => {
+      window.removeEventListener("online", updateOnlineStatus);
+      window.removeEventListener("offline", updateOnlineStatus);
+    };
+  }, [navigator.onLine]);
+
+  console.log(isOnline);
+
   const { products } = useProductContext();
   const [firstProduct, secondProduct, thirdProduct] = products.slice(0, 3);
 
@@ -15,7 +37,7 @@ const Home = () => {
   return (
     <div className="home__body">
       <Row md={2} xs={1} className="g-4 Home__Grid">
-        <Col className="mr-md-5" md={{ order: "first"}} xs={{ order: "last"}}>
+        <Col className="mr-md-5" md={{ order: "first" }} xs={{ order: "last" }}>
           <h1>Discover our latest collection</h1>
           <p style={{ textAlign: "justify" }}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. At nulla
@@ -28,13 +50,20 @@ const Home = () => {
             at facere nisi. Nulla explicabo ullam consectetur! Animi, natus!
           </p>
           <LinkContainer to="/store">
-            <button className="p-3  fw-bold rounded Home__btn">Discover More</button>
+            <button className="p-3  fw-bold rounded Home__btn">
+              Discover More
+            </button>
           </LinkContainer>
         </Col>
         <div className="carousel__div">
-          <Col md={{ order: "last"}} xs={{ order: "first"}}>
+          <Col md={{ order: "last" }} xs={{ order: "first" }}>
+            {!isOnline && (
+              <p className="text-danger text-center fs-5">
+                Please check your internet connectivity
+              </p>
+            )}
             {products.length === 0 ? (
-              <div>
+              <div className="text-center">
                 <Spinner animation="border" variant="primary" />
               </div>
             ) : (
