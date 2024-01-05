@@ -25,7 +25,7 @@ const Home = () => {
     };
   }, [navigator.onLine]);
 
-  console.log(isOnline);
+  // console.log(isOnline);
 
   const { products } = useProductContext();
   const [firstProduct, secondProduct, thirdProduct] = products.slice(0, 3);
